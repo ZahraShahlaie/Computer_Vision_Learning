@@ -1,65 +1,65 @@
 
 
-# 🔢 Bit Depth in Digital Images
+#  Bit Depth in Digital Images
 
 ## 📌 What is Bit Depth?
 
-Bit depth defines how many different intensity or color values each pixel in an image can represent. In simple terms, it determines how many levels of brightness or color are available per pixel.
+Bit Depth defines how many different intensity or color values each pixel in an image can represent.
 
-Higher bit depth means:
+In simple terms:
 
-* More detailed images
-* Smoother color transitions
-* Wider color range
+> Bit depth = number of brightness or color levels per pixel.
+
+The higher the bit depth, the more detailed and smoother the image will be.
 
 ---
 
 ## 🎚️ 8-bit Images
 
-In 8-bit images:
+In an 8-bit image:
 
-[
+$$
 2^8 = 256
-]
+$$
 
-So each pixel can take **256 different values**:
+Each pixel can represent **256 different values**:
 
-* 0 → black
-* 255 → white
-* Values in between → grayscale intensities
+- 0 → black  
+- 255 → white  
+- Values in between → grayscale levels  
 
-📌 This is the most common standard in image processing.
+📌 This is the most common format in image processing.
 
 ---
 
 ## 🧩 General Case (n-bit Images)
 
-For an n-bit image:
+If bit depth is **n**, then:
 
-[
-2^n \text{ possible levels}
-]
+$$
+2^n \text{ intensity levels}
+$$
 
 Examples:
 
-* 4-bit → (2^4 = 16) levels (0–15)
-* 10-bit → (2^{10} = 1024) levels
-* 16-bit → (2^{16} = 65536) levels
+- 4-bit → $2^4 = 16$ levels (0–15)  
+- 10-bit → $2^{10} = 1024$ levels  
+- 16-bit → $2^{16} = 65536$ levels  
 
 ---
 
 ## 🎨 Effect of Bit Depth on Image Quality
 
-Higher bit depth leads to:
+As bit depth increases:
 
-* Smoother gradients
-* Better detail preservation
-* Reduced banding artifacts
+- 🎯 Smoother transitions between colors  
+- 🎯 Better detail preservation  
+- 🎯 Reduced banding effects  
 
-However:
+But:
 
-* Increased memory usage
-* Higher computational cost
+- 💾 Higher memory usage  
+- ⚙️ More computational cost  
 
 ---
 
@@ -67,15 +67,15 @@ However:
 
 In standard RGB images:
 
-* Each channel (R, G, B) has 8 bits
+- Each channel (R, G, B) = 8 bits  
 
-So:
+So total bit depth per pixel:
 
-[
-8 \times 3 = 24 \text{ bits per pixel}
-]
+$$
+8 \times 3 = 24 \text{ bits}
+$$
 
-📌 This is known as a **24-bit image**.
+📌 This is called a **24-bit color image**
 
 ---
 
@@ -83,78 +83,88 @@ So:
 
 For a 24-bit image:
 
-[
-2^{24} = 16,777,216 \text{ colors}
-]
+$$
+2^{24} = 16,777,216
+$$
 
-📌 Approximately **16.7 million colors**.
+📌 ≈ 16.7 million colors
 
 ---
 
 ## 🖥️ 10-bit Images
 
-In professional imaging systems:
+For 10-bit per channel images:
 
-* Each channel = 10 bits
+- Each channel = 10 bits  
 
-[
-2^{10} = 1024 \text{ levels per channel}
-]
+$$
+2^{10} = 1024 \text{ levels}
+$$
 
 Total colors:
 
-[
+$$
 1024 \times 1024 \times 1024 \approx 1 \text{ billion colors}
-]
-
-📌 Much smoother gradients compared to 8-bit images.
+$$
 
 ---
 
-## 💾 Memory Usage of an Image
+## 💾 Image Memory Usage (Raw Size)
 
-General formula for raw image memory:
+General formula:
 
-[
-Height \times Width \times Channels \times (Bit\ Depth / 8)
-]
+```
 
-### 📌 Example:
+Height × Width × Channels × num bits
 
-For a 200 × 200 RGB 8-bit image:
+```
 
-[
-200 \times 200 \times 3 \times 1 = 120{,}000 \text{ bytes}
-]
+### 📌 Example: 200×200 RGB image (8-bit)
 
-≈ **120 KB**
+```
 
----
+200 × 200 × 3 × 1 byte = 120,000 bytes
 
-## 🗜️ RAW vs Compressed Images
+```
 
-### 📁 Compressed formats (JPEG, PNG):
-
-* Reduced file size
-* Some information may be lost (lossy compression in JPEG)
-
-### 🧠 RAW representation in memory:
-
-* Fully uncompressed
-* Stored as NumPy arrays in RAM
-* Larger than disk file size
+≈ **120 KB (raw image size)**
 
 ---
 
-## 🧠 Image Loading in Python / OpenCV
+## 📦 RAW vs Compressed Images
 
-When an image is loaded in OpenCV:
+Images stored on disk (JPEG, PNG):
 
-* It is read from disk (compressed format)
-* Converted into an uncompressed NumPy array
-* Stored in RAM
+- Compressed format  
+- Some data is lost or optimized  
+- Smaller file size  
 
-📌 Therefore, memory usage in RAM is often higher than file size on disk.
+When loaded in Python (OpenCV):
+
+- Image is decompressed  
+- Stored as NumPy array in RAM  
+- Memory usage is higher than disk size  
+
+---
+
+## 🧠 OpenCV Image Representation
+
+When loading an image in OpenCV:
+
+- Stored as a NumPy `ndarray`
+- Data type is usually:
+
+```
+
+uint8
+
+```
+
+Meaning:
+
+- Integer values only  
+- Range: 0–255  
+- No decimal values  
 
 ---
 
@@ -162,23 +172,11 @@ When an image is loaded in OpenCV:
 
 If bit depth is reduced (e.g., 8-bit → 4-bit):
 
-* Memory usage decreases
-* But:
+- Memory usage decreases  
+- But:
+  - Image details are lost  
+  - Quality decreases  
+  - Banding artifacts appear  
 
-  * Significant loss of detail
-  * Reduced color accuracy
-  * Visible artifacts and banding
+📌 Therefore, most computer vision systems use **8-bit or higher**
 
-📌 Therefore, 8-bit or higher is commonly used in most computer vision applications.
-
----
-
-## 🚀 Summary
-
-Bit depth is a fundamental concept in digital imaging that balances:
-
-* Image quality
-* Memory usage
-* Computational cost
-
-Higher bit depth provides better visual quality but requires more storage and processing power.

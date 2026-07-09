@@ -143,6 +143,8 @@ Then:
 
 As a result, the image ends up with random white and black spots.
 
+<img width="1389" height="570" alt="image" src="https://github.com/user-attachments/assets/ef2078a2-8016-4cf0-82a3-c26981a3c247" />
+
 ---
 
 # Gaussian Noise
@@ -172,7 +174,13 @@ The important parameters are:
 - **Mean**: the average value of the noise (usually zero)
 - **Standard deviation**: the intensity of the noise
 
-The larger the standard deviation, the stronger the noise.
+The larger the standard deviation, the stronger the noise
+
+<img width="569" height="413" alt="image" src="https://github.com/user-attachments/assets/05b7fa9d-b54d-430d-9adc-790bfdd5fb63" />
+
+
+<img width="1141" height="450" alt="image" src="https://github.com/user-attachments/assets/91b8e1af-dc25-4c58-a40a-5414abd7971f" />
+
 
 ---
 

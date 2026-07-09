@@ -68,7 +68,8 @@
 * عملیات فیلتر روی تمام پیکسل‌ها انجام می‌شود.
 * خروجی همان ابعاد تصویر ورودی را خواهد داشت.
 
-* <img width="1650" height="571" alt="padding" src="https://github.com/user-attachments/assets/f078b252-4f51-45ab-88ce-8670719da4fe" />
+
+ img width="1650" height="571" alt="padding" src="https://github.com/user-attachments/assets/f078b252-4f51-45ab-88ce-8670719da4fe" />
 
 
 ---

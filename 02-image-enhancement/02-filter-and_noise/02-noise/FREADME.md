@@ -131,6 +131,8 @@
 
 این نویز معمولاً به علت خرابی سنسورها یا خطاهای انتقال داده ایجاد می‌شود.
 
+<img width="1389" height="579" alt="image" src="https://github.com/user-attachments/assets/c9548802-ec2c-4db7-b2b7-b0ab2d50b388" />
+
 ---
 
 # ایجاد نویز Salt & Pepper
@@ -156,6 +158,10 @@
 
 به همین دلیل تصویر حالت دانه‌دانه پیدا می‌کند و کیفیت آن کاهش می‌یابد.
 
+
+<img width="1153" height="456" alt="image" src="https://github.com/user-attachments/assets/13e2aee6-72e1-429a-9242-34ee2ab06b01" />
+
+
 ---
 
 # تولید نویز Gaussian
@@ -167,6 +173,8 @@
 ```python
 np.random.normal(mean, std, image.shape)
 ```
+
+<img width="569" height="413" alt="image" src="https://github.com/user-attachments/assets/c476624f-b4fc-44a5-8055-61b51f7e6117" />
 
 پارامترهای مهم عبارت‌اند از:
 

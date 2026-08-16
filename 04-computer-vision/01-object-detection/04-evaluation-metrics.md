@@ -148,11 +148,9 @@ IoU measures the overlap between:
 
 The formula is:
 
-[
-IoU =
+$$IoU =
 \frac{\text{Area of Intersection}}
-{\text{Area of Union}}
-]
+{\text{Area of Union}}$$
 
 or:
 
@@ -207,9 +205,7 @@ The more the two boxes overlap, the higher the IoU.
 
 IoU always falls between `0` and `1`:
 
-[
-0 \leq IoU \leq 1
-]
+$$ 0 \leq IoU \leq 1$$
 
 ### IoU = 0
 
@@ -412,10 +408,8 @@ Precision answers:
 
 The formula is:
 
-[
-Precision =
-\frac{TP}{TP + FP}
-]
+$$ Precision =
+\frac{TP}{TP + FP}$$
 
 Conceptually:
 
@@ -514,9 +508,7 @@ FN = 5
 
 Then:
 
-[
-Recall = \frac{4}{4+5}
-]
+$$ Recall = \frac{4}{4+5} $$
 
 ```text
 Recall = 4 / 9

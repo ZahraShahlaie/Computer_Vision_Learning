@@ -1,0 +1,7 @@
+path: ./Yolo_dataset
+
+train: images/train
+val: images/val
+
+nc: 3
+names: ['airplane', 'face', 'motorcycle']

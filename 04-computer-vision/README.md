@@ -1,10 +1,8 @@
 # 👁️ Advanced Computer Vision
 
-This repository contains a structured collection of tutorials, articles, notebooks, experiments, and practical projects covering important topics in modern **Computer Vision and Deep Learning**.
+This section contains a structured collection of tutorials, articles, notebooks, experiments, and practical projects covering modern **Computer Vision and Deep Learning**.
 
-This section progresses from fundamental computer vision tasks such as **object detection** and **semantic segmentation**, through **object tracking** and **Vision Transformers**, and finally applies these concepts to **real-world computer vision projects**.
-
-Each subfolder focuses on a specific computer vision task, architecture, or practical application and combines theoretical concepts with hands-on implementations.
+The learning path progresses from **object detection and semantic segmentation** to **object tracking, Vision Transformers, and real-world computer vision applications**.
 
 ---
 
@@ -12,22 +10,15 @@ Each subfolder focuses on a specific computer vision task, architecture, or prac
 
 ### 01 - Object Detection
 
-Learn how computer vision models can locate and classify multiple objects within an image.
+Learn how computer vision models locate and classify objects within images.
 
 Topics include:
 
-* Introduction to Object Detection
+* Object Detection Fundamentals
 * Classification vs Localization vs Detection
-* Bounding Boxes
-* Object Classes
-* Confidence Scores
-* Object Detection Pipeline
+* Bounding Boxes and Confidence Scores
 * Dataset Annotation
-* Evaluation Metrics
-* Intersection over Union (IoU)
-* Precision and Recall
-* Average Precision (AP)
-* Mean Average Precision (mAP)
+* IoU, Precision, Recall, AP, and mAP
 * R-CNN
 * Fast R-CNN
 * Faster R-CNN
@@ -36,41 +27,32 @@ Topics include:
 * YOLOv2
 * YOLOv3
 
-This section covers the evolution of object detection from region-based two-stage detectors to fast single-stage detection approaches.
+This section covers the evolution from two-stage detectors to fast single-stage detection approaches.
 
 ---
 
 ### 02 - Semantic Segmentation
 
-Learn how deep learning models perform **pixel-level predictions** and assign semantic classes to image regions.
+Learn how deep learning models perform **pixel-level predictions** and generate segmentation masks.
 
 Topics include:
 
-* Introduction to Semantic Segmentation
-* Image Classification vs Object Detection vs Segmentation
+* Semantic Segmentation Fundamentals
 * Pixel-wise Classification
-* Segmentation Masks
-* Binary Segmentation
-* Multi-class Segmentation
-* Evaluation Metrics
-* Pixel Accuracy
-* Mean Pixel Accuracy (mPA)
-* Intersection over Union (IoU)
-* Mean Intersection over Union (mIoU)
-* Dice Coefficient
+* Binary and Multi-class Segmentation
+* Pixel Accuracy, mPA, IoU, mIoU, and Dice
 * U-Net
 * Encoder-Decoder Architecture
 * Skip Connections
-* Advanced U-Net Architectures
 * U-Net++
 * Residual U-Net
 * DeepLab
 * Atrous Convolution
-* Atrous Spatial Pyramid Pooling (ASPP)
+* ASPP
 * DeepLabV3
 * DeepLabV3+
 
-The practical notebooks demonstrate the complete semantic segmentation workflow, from dataset preparation and mask processing to model training and evaluation.
+Practical notebooks cover dataset preparation, mask processing, training, and evaluation.
 
 ---
 
@@ -81,32 +63,25 @@ Learn how objects can be detected and tracked across consecutive video frames.
 Topics include:
 
 * Video Processing with OpenCV
-* Video Frames
-* Object Tracking
-* Object Detection vs Object Tracking
-* Single Object Tracking
-* Multiple Object Tracking
-* Bounding Box Tracking
+* Object Detection vs Tracking
+* Single and Multi-Object Tracking
 * Tracking-by-Detection
-* Tracking Algorithms
+* Bounding Box Tracking
 * Feature-Based Tracking
 * Deep Learning-Based Tracking
 * Persistent Object IDs
 * Multi-Object Tracking
 
-This section also includes practical video-based tracking experiments, including a football player detection and tracking project.
-
-The goal is to understand how computer vision systems can move from analyzing individual images to maintaining object identities over time.
+This section includes practical video-based tracking experiments, including football player detection and tracking.
 
 ---
 
 ### 04 - Vision Transformers
 
-Explore Transformer-based architectures for computer vision and understand how the **Vision Transformer (ViT)** processes visual information.
+Explore Transformer-based architectures for computer vision and understand how **Vision Transformers (ViT)** process visual information.
 
 Topics include:
 
-* Introduction to Vision Transformers
 * CNNs vs Transformers
 * Image Patches
 * Patch Embeddings
@@ -116,75 +91,57 @@ Topics include:
 * Self-Attention
 * Multi-Head Self-Attention
 * Vision Transformer Architecture
-* Advantages of Vision Transformers
-* Limitations of Vision Transformers
+* Global Context Modeling
+* Advantages and Limitations of ViTs
 * Computational Complexity
 * Data Requirements
-* Global Context Modeling
-
-This section provides the foundation required for understanding modern Transformer-based computer vision architectures.
 
 ---
 
 ### 05 - Practical Computer Vision Projects
 
-Apply the concepts learned throughout the previous sections to complete end-to-end computer vision projects based on real-world scenarios.
-
-This section focuses on combining multiple computer vision techniques into practical pipelines rather than studying individual algorithms in isolation.
-
-Current projects include:
+Apply the concepts from the previous sections to complete end-to-end computer vision projects.
 
 #### 🔬 Colonoscopy Polyp Detection & Tracking
 
-A YOLO-based computer vision pipeline for detecting polyps in colonoscopy video.
+A YOLO11-based pipeline for detecting and tracking polyps in colonoscopy video.
 
-The project combines:
+Key components:
 
 * YOLO11 object detection
 * Real-time video inference
 * Object tracking
 * Persistent tracking IDs
 * Automatic frame capture
-* Timestamp-based frame naming
-* Annotated output video generation
+* Timestamp-based filenames
+* Annotated output video
 
-Whenever a polyp is detected, the corresponding annotated frame is automatically saved for later review.
+Detected frames are automatically saved for later review.
 
-This project demonstrates how object detection and tracking can be combined into a practical medical-imaging workflow.
-
-> **Important:** This is a research/educational project and is not a certified medical device. It does not provide medical diagnosis or determine polyp type or malignancy.
+> **Note:** This is a research/educational project and is not a certified medical device. It does not provide medical diagnosis.
 
 #### 🚗 Road Lane Segmentation & Vehicle Detection/Tracking
 
-An end-to-end autonomous-driving perception pipeline combining:
+An autonomous-driving perception pipeline combining:
 
-* DeepLabV3+ semantic segmentation
-* ResNet50 backbone
+* DeepLabV3+ with ResNet50
 * YOLO11 object detection
 * BoT-SORT multi-object tracking
 * Re-identification (ReID)
 * Real-time video processing
-* Lane-mask and vehicle-overlay visualization
+* Lane and vehicle visualization
 
-The pipeline processes driving video and combines lane segmentation with vehicle detection and tracking to create a unified perception output.
-
-These projects demonstrate how the concepts covered throughout this section can be integrated into larger real-world computer vision systems.
+The pipeline combines lane segmentation, vehicle detection, and tracking into a unified video output.
 
 ---
 
 ## 🔄 Computer Vision Workflow
 
-The topics in this section progress through several major levels of visual understanding:
+The topics progress from fundamental tasks to practical applications:
 
-**Image Understanding → Detection → Segmentation → Tracking → Transformers → Real-World Applications**
+**Object Detection → Semantic Segmentation → Object Tracking → Vision Transformers → Real-World Projects**
 
-These tasks demonstrate how computer vision systems can progress from understanding individual images to:
-
-1. Detecting objects and their locations
-2. Predicting pixel-level information
-3. Tracking objects through video sequences
-4. Modeling global visual relationships using Transformer architectures
-5. Combining multiple techniques into practical end-to-end systems
+These concepts demonstrate how computer vision systems can progress from detecting objects to understanding pixels, tracking objects through time, modeling visual relationships, and building complete application-oriented pipelines.
 
 ---
 
@@ -192,23 +149,21 @@ These tasks demonstrate how computer vision systems can progress from understand
 
 Throughout this section, you will work with:
 
-* Image Understanding
 * Object Detection
 * Semantic Segmentation
 * Object Tracking
 * Multi-Object Tracking
 * Video Processing
 * Deep Learning
-* CNN-Based Architectures
+* CNN Architectures
 * Encoder-Decoder Networks
 * Attention Mechanisms
 * Transformer Architectures
 * Vision Transformers
-* Model Evaluation
 * Dataset Preparation
 * Data Augmentation
+* Model Evaluation
 * Real-Time Inference
-* Computer Vision Pipelines
 * Medical Computer Vision
 * Autonomous Driving Perception
 * Real-World Computer Vision Projects
@@ -217,107 +172,77 @@ Throughout this section, you will work with:
 
 ## 📂 Section Structure
 
-The `04-computer-vision` directory is organized into five major topics:
-
 ```text
 04-computer-vision/
 │
 ├── 01-object-detection/
-│   └── Object detection concepts, algorithms,
-│       evaluation metrics, and practical implementations
-│
 ├── 02-segmentation/
-│   └── Semantic segmentation concepts,
-│       U-Net, DeepLab, and segmentation experiments
-│
 ├── 03-object-tracking/
-│   └── Video processing, tracking algorithms,
-│       and practical tracking projects
-│
 ├── 04-vision-transformers/
-│   └── Vision Transformer concepts,
-│       architecture, advantages, and limitations
 │
 ├── 05-projects/
 │   ├── colonoscopy-polyp-detection-and-tracking/
-│   │   └── YOLO-based polyp detection,
-│   │       tracking, and automatic frame capture
-│   │
 │   └── lane-segmentation-vehicle-tracking/
-│       └── Lane segmentation, vehicle detection,
-│           and multi-object tracking
 │
 └── README.md
 ```
 
 Each topic contains dedicated articles, notebooks, experiments, and supporting materials.
 
+---
 
 ## 🎯 Learning Outcomes
 
-By completing this section, you will understand the fundamentals and evolution of several major computer vision tasks and architectures.
-
-You will also gain practical knowledge required to:
+By completing this section, you will be able to:
 
 * Build object detection pipelines
-* Prepare and annotate datasets
-* Convert datasets between annotation formats
-* Evaluate detection models
+* Prepare and evaluate computer vision datasets
 * Perform pixel-level image segmentation
 * Work with segmentation masks
-* Build encoder-decoder architectures
-* Understand object tracking pipelines
-* Track multiple objects across video frames
+* Understand and implement object tracking
 * Process and analyze video data
-* Apply tracking algorithms
-* Understand Transformer-based vision models
-* Analyze Vision Transformer architectures
-* Compare CNN-based and Transformer-based approaches
+* Work with Transformer-based vision models
+* Compare CNN and Transformer approaches
 * Build real-time computer vision pipelines
-* Combine multiple models in a single application
-* Apply computer vision techniques to real-world problems
+* Combine multiple models into practical applications
 
 ---
 
 ## 🎯 Learning Path
 
-The recommended learning path for this section is:
+**01 → Object Detection**
 
-### 01 → Object Detection
-
-Understand how objects are located and classified.
+Learn how objects are located and classified.
 
 ⬇️
 
-### 02 → Semantic Segmentation
+**02 → Semantic Segmentation**
 
 Move from object-level predictions to pixel-level understanding.
 
 ⬇️
 
-### 03 → Object Tracking
+**03 → Object Tracking**
 
-Extend visual understanding from individual images to video sequences and persistent object identities.
-
-⬇️
-
-### 04 → Vision Transformers
-
-Explore modern Transformer-based approaches for visual representation and understanding.
+Extend visual understanding from images to video sequences.
 
 ⬇️
 
-### 05 → Practical Projects
+**04 → Vision Transformers**
 
-Combine the learned concepts into complete real-world computer vision applications.
+Explore modern Transformer-based approaches for visual understanding.
+
+⬇️
+
+**05 → Practical Projects**
+
+Combine the learned concepts into real-world computer vision applications.
 
 ---
 
 ## 🚀 Goal
 
-The main goal of this section is to build a strong understanding of **advanced Computer Vision and Deep Learning**, while gradually moving from theoretical concepts to practical end-to-end applications.
-
-The learning process follows this progression:
+The goal of this section is to build a strong understanding of **Computer Vision and Deep Learning**, progressing from fundamental concepts to advanced architectures and complete practical applications.
 
 ```text
 Computer Vision Fundamentals
@@ -336,35 +261,19 @@ Computer Vision Fundamentals
             │
             ▼
   Practical Applications
-            │
-            ▼
-End-to-End Vision Pipelines
 ```
 
-By the end of this section, learners should be able to understand, implement, evaluate, and combine modern computer vision techniques in practical scenarios.
-
 ---
-
 
 ## 📁 Repository Navigation
 
-| Directory                 | Description                                                          |
-| ------------------------- | -------------------------------------------------------------------- |
-| `01-object-detection/`    | Object detection theory, algorithms, evaluation, and implementations |
-| `02-segmentation/`        | Semantic segmentation, U-Net, DeepLab, and related experiments       |
-| `03-object-tracking/`     | Video processing, tracking concepts, and tracking implementations    |
-| `04-vision-transformers/` | Vision Transformer concepts and modern Transformer-based vision      |
-| `05-projects/`            | End-to-end practical computer vision projects                        |
-
----
-
-## 📖 Recommended Progression
-
-For the best learning experience, follow the repository in this order:
-
-**Detection → Segmentation → Tracking → Transformers → Projects**
-
-The first four sections establish the theoretical and technical foundations, while the fifth section focuses on applying those skills to practical computer vision problems.
+| Directory                 | Description                                                |
+| ------------------------- | ---------------------------------------------------------- |
+| `01-object-detection/`    | Object detection concepts, algorithms, and implementations |
+| `02-segmentation/`        | Semantic segmentation, U-Net, DeepLab, and experiments     |
+| `03-object-tracking/`     | Video processing and object tracking                       |
+| `04-vision-transformers/` | Vision Transformer concepts and architectures              |
+| `05-projects/`            | End-to-end practical computer vision projects              |
 
 ---
 
@@ -378,7 +287,6 @@ Created for learning and educational purposes in:
 * Deep Learning
 * Artificial Intelligence
 * Machine Learning
-* Real-World AI Applications
 
 ---
 

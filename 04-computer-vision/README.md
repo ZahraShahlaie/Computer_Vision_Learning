@@ -203,7 +203,7 @@ Computer Vision Fundamentals
             │
             ▼
      Practical Projects
-
+```
 ---
 
 ## 👩‍💻 Author
